@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings (Configuração ESM para Node)
+    // Use 'nodenext' para alinhamento total com o Node.js no modo ES Modules
+    "module": "nodenext", 
+    "moduleResolution": "nodenext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    // O array 'types' pode ser simplificado
+    "types": ["node"],
+
+    // Interoperabilidade e Rigor
+    "esModuleInterop": true, // Boa prática para interoperar com módulos CommonJS
+    
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true,
+    // Garante que o Node detecte módulos corretamente
+    "moduleDetection": "force" 
+  }
+}
