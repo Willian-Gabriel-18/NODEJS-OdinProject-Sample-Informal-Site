@@ -3,7 +3,9 @@ import fs from 'node:fs';
 import url from 'node:url';
 import path from 'node:path';
 
-const PORT = 8090;
+(await import('dotenv')).config({path:path.resolve(import.meta.dirname, '..', '.env')});
+
+const PORT = process.env.SERVER_PORT || 8090;
 
 const server = http.createServer(async (req, res)=>{
     try {
@@ -48,6 +50,6 @@ const server = http.createServer(async (req, res)=>{
     }
 }); 
 
-server.listen(PORT, 'localhost', ()=>{
+server.listen(PORT, ()=>{
     console.log('Servidor rodando na porta ', PORT);
 })
